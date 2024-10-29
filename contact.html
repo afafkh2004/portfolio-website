@@ -132,40 +132,42 @@
     </div>
   </section>
 
-  <!-- JavaScript to Override Form Submission -->
-  <script>
-    document.querySelector('.contact-form').addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent default form submission
+<!-- JavaScript to Override Form Submission -->
+<script>
+  document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
 
-      // Gather form data
-      const formData = new FormData(this);
-      const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message')
-      };
+    // Gather form data
+    const formData = new FormData(this);
+    const data = {
+      name: formData.get('name'),
+      email: formData.get('email'),
+      message: formData.get('message')
+    };
 
-      // Send form data to the server using fetch
-      fetch('https://portfolio-backend-hfog.onrender.com/send-message', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-      })
-      .then(response => {
-        if (response.ok) {
-          window.location.href = '/'; // Redirect to homepage after success
-        } else {
-          alert('Error occurred while sending the message. Please try again later.');
-        }
-      })
-      .catch(error => {
-        console.error('Error:', error);
+    // Send form data to the server using fetch
+    fetch('https://portfolio-backend-hfog.onrender.com/send-message', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => {
+      if (response.ok) {
+        // Redirect to the GitHub Pages homepage after success
+        window.location.href = 'https://afafkh2004.github.io/portfolio-website/?message=success'; 
+      } else {
         alert('Error occurred while sending the message. Please try again later.');
-      });
+      }
+    })
+    .catch(error => {
+      console.error('Error:', error);
+      alert('Error occurred while sending the message. Please try again later.');
     });
-  </script>
+  });
+</script>
+
 
 </body>
 </html>
