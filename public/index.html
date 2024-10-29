@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afaf Khurram's Portfolio</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #000; /* Black background for UGA */
+      color: #fff; /* White text */
+    }
+    header {
+      text-align: center;
+      padding: 20px;
+      background-color: #000; /* Black background for the top section */
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+    nav ul li {
+      margin: 0 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    .about {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #cc0000; /* UGA red */
+      color: #fff;
+      padding: 50px 20px;
+      text-align: left;
+    }
+    .image-container {
+      background-color: #fff; /* White background */
+      padding: 15px; /* Space between image and box edge */
+      display: inline-block; /* Fit tightly around the image */
+    }
+    .about img {
+      display: block; /* Remove extra spacing around the image */
+      width: 500px; /* Keep the same width as before */
+      height: auto;
+    }
+    .about-content {
+      max-width: 600px;
+      margin-left: 30px; /* Adds space between the image and the text content */
+    }
+    footer {
+      background-color: #121212;
+      color: #999;
+      padding: 20px;
+      text-align: center;
+    }
+    .connect-icons a {
+      color: #fff;
+      margin: 0 10px;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header and Navigation -->
+  <header>
+    <h1>Afaf Khurram</h1>
+    <p>Computer Science Student at the University of Georgia</p>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Connect</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <div class="image-container">
+      <img src="/images/GEORGIA-FS-FC.png" alt="University of Georgia Logo">
+    </div>
+    <div class="about-content">
+      <h2>About Me</h2>
+      <p>I am a computer science student at the University of Georgia, graduating in 2026. I have a passion for cars and technology, and I enjoy helping automotive businesses, such as dealerships and wrap shops, grow through creative content and effective marketing solutions. I established my agency, z00mmedia, to combine these passions and provide consulting and media services to the automotive community. Through my studies, I've developed skills in software development using Python and Java, which I actively use to solve business problems with technology-driven approaches.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Connect with me:</p>
+    <div class="connect-icons">
+      <a href="https://www.linkedin.com/in/afaf-khurram-a6175a219/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:afafkh2004@gmail.com"><i class="fas fa-envelope"></i></a>
+      <a href="tel:+16787560889"><i class="fas fa-phone"></i></a>
+    </div>
+  </footer>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      if (urlParams.get('message') === 'success') {
+        alert('Your message has been sent successfully!');
+      }
+    });
+  </script>
+  
+</body>
+</html>
